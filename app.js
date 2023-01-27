@@ -2,9 +2,10 @@ const express = require("express");
 const request = require("request");
 const bodyParser = require("body-parser");
 const https = require("https");
+require("dotenv").config();
 
-const apikey = "8c57738a2eb3dfe0428bfb70c958ffaa-us9";
-const audienceID = "5afedf591f";
+const apikey = process.env.API_KEY;
+const audienceID = process.env.AUDIENCE_ID;
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
